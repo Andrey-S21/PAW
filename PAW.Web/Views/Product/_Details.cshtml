@@ -1,0 +1,61 @@
+﻿@model PAW.Models.DTO.ProductDetailsDTO
+
+<div class="modal-header">
+    <h5 class="modal-title">Product Details</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Product</div>
+        <div class="card-body">
+            <partial name="_DetailsFields" model="Model.Product" />
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Inventory</div>
+        <div class="card-body">
+            @if (Model.Inventory != null)
+            {
+                <partial name="~/Views/Inventory/_DetailsFields.cshtml" model="Model.Inventory" />
+            }
+            else
+            {
+                <span class="text-muted">This product has no associated inventory.</span>
+            }
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Category</div>
+        <div class="card-body">
+            @if (Model.Category != null)
+            {
+                <partial name="~/Views/Category/_DetailsFields.cshtml" model="Model.Category" />
+            }
+            else
+            {
+                <span class="text-muted">This product has no associated category.</span>
+            }
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header fw-semibold">Supplier</div>
+        <div class="card-body">
+            @if (Model.Supplier != null)
+            {
+                <partial name="~/Views/Supplier/_DetailsFields.cshtml" model="Model.Supplier" />
+            }
+            else
+            {
+                <span class="text-muted">This product has no associated supplier.</span>
+            }
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>

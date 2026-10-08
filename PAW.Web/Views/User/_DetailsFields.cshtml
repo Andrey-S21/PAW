@@ -1,0 +1,22 @@
+﻿@model PAW.Models.DTO.UserDTO
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">User ID</dt>
+    <dd class="col-sm-8">@Model.UserId</dd>
+    <dt class="col-sm-4">Username</dt>
+    <dd class="col-sm-8">@Model.Username</dd>
+    <dt class="col-sm-4">Email</dt>
+    <dd class="col-sm-8">@Model.Email</dd>
+    <dt class="col-sm-4">Created At</dt>
+    <dd class="col-sm-8">@(Model.CreatedAt?.ToString("yyyy-MM-dd HH:mm"))</dd>
+    <dt class="col-sm-4">Active</dt>
+    <dd class="col-sm-8">@(Model.IsActive == true ? "Yes" : "No")</dd>
+    <dt class="col-sm-4">Last Modified</dt>
+    <dd class="col-sm-8">@(Model.LastModified?.ToString("yyyy-MM-dd HH:mm"))</dd>
+    <dt class="col-sm-4">Modified By</dt>
+    <dd class="col-sm-8">@Model.ModifiedBy</dd>
+    <dt class="col-sm-4">Role ID</dt>
+    <dd class="col-sm-8">@Model.RoleId</dd>
+    <dt class="col-sm-4">Last Modified By</dt>
+    <dd class="col-sm-8">@Model.LastModifiedBy</dd>
+</dl>
