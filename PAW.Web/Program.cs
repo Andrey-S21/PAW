@@ -22,6 +22,8 @@ builder.Services.AddScoped<IPawTaskService, PawTaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserActionService, UserActionService>();
 builder.Services.AddScoped<IUserRoleService, UserRoleService>();
+builder.Services.AddScoped<IMinimalTaskService, MinimalTaskService>();
+
 
 var app = builder.Build();
 
